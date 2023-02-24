@@ -1,5 +1,8 @@
+
 # File: Dockerfile
 FROM rocker/shiny-verse:latest
+
+ENV RENV_VERSION 0.16.0
 
 RUN apt-get update -qq \
   && apt-get -y --no-install-recommends install \
@@ -16,7 +19,7 @@ COPY app/renv.lock renv.lock
 ENV RENV_PATHS_LIBRARY renv/library
 
 RUN --mount=type=cache,target=/var/cache/renv R -e "renv::restore()"
-
+# RUN R -e "renv::restore()"
 
 # remove demo apps
 RUN rm -rf /srv/shiny-server/*
