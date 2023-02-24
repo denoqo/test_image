@@ -25,4 +25,5 @@ RUN --mount=type=cache,target=/var/cache/renv R -e "renv::restore()"
 RUN rm -rf /srv/shiny-server/*
 
 # copy in the app
-COPY app/ /srv/shiny-server/
+COPY app /srv/shiny-server/
+COPY test-app /srv/shiny-server/
