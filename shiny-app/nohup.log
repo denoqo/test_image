@@ -1,0 +1,1014 @@
+sudo DOCKER_BUILDKIT=1 docker build --no-cache -t eas-test .
+#1 [internal] load build definition from Dockerfile
+#1 sha256:73a6ba33716ef952bfa4233aa1e413fd80394472a440b52e6e61524019c7b878
+#1 transferring dockerfile: 38B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:fd9e4947ba543d8b14bf158bea6f4eaa436ac197ac79e8f9e3f40a47c1928351
+#2 transferring context: 2B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/rocker/shiny-verse:latest
+#3 sha256:2fe3c95f2d91ac747c7cc5875f21e80c35c244db6ff7852a13ec77c71033d1a7
+#3 DONE 0.0s
+
+#4 [stage-0 1/9] FROM docker.io/rocker/shiny-verse:latest
+#4 sha256:a0a05cf8de58a5702b0f5baf0689a01fc3bfec38f11e8c61cdddcb6af5595ea3
+#4 CACHED
+
+#8 [internal] load build context
+#8 sha256:5e43145c19e45522c49315c6466dc0f9b29b719bfdc757302664972a16aec6db
+#8 transferring context: 2.80kB 0.0s done
+#8 DONE 0.1s
+
+#5 [stage-0 2/9] RUN apt-get update -qq   && apt-get -y --no-install-recommends install     lbzip2   && install2.r --error --deps TRUE     shinyWidgets
+#5 sha256:f2a70f77c46adceeefe729a6ec51de14fb61acf3f61bf8a77629c194d2482adb
+#5 3.325 Reading package lists...
+#5 4.224 Building dependency tree...
+#5 4.377 Reading state information...
+#5 4.554 The following NEW packages will be installed:
+#5 4.555   lbzip2
+#5 4.718 0 upgraded, 1 newly installed, 0 to remove and 11 not upgraded.
+#5 4.718 Need to get 65.7 kB of archives.
+#5 4.718 After this operation, 162 kB of additional disk space will be used.
+#5 4.718 Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 lbzip2 amd64 2.5-2.3 [65.7 kB]
+#5 5.164 debconf: delaying package configuration, since apt-utils is not installed
+#5 5.201 Fetched 65.7 kB in 0s (197 kB/s)
+#5 5.229 Selecting previously unselected package lbzip2.
+#5 5.229 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26892 files and directories currently installed.)
+#5 5.253 Preparing to unpack .../lbzip2_2.5-2.3_amd64.deb ...
+#5 5.260 Unpacking lbzip2 (2.5-2.3) ...
+#5 5.308 Setting up lbzip2 (2.5-2.3) ...
+#5 6.711 also installing the dependencies ‘lazyeval’, ‘BH’, ‘rex’, ‘fresh’, ‘waiter’, ‘crosstalk’, ‘anytime’, ‘shinydashboard’, ‘covr’, ‘shinydashboardPlus’, ‘bs4Dash’, ‘argonR’, ‘argonDash’, ‘tablerDash’, ‘DT’
+#5 6.711 
+#5 6.713 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/lazyeval_0.2.2.tar.gz'
+#5 7.216 Content type 'binary/octet-stream' length 162947 bytes (159 KB)
+#5 7.217 ==================================================
+#5 7.222 downloaded 159 KB
+#5 7.222 
+#5 7.226 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/BH_1.81.0-1.tar.gz'
+#5 7.628 Content type 'binary/octet-stream' length 12941404 bytes (12.3 MB)
+#5 7.639 ==================================================
+#5 7.721 downloaded 12.3 MB
+#5 7.721 
+#5 7.726 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/rex_1.2.1.tar.gz'
+#5 8.313 Content type 'binary/octet-stream' length 122979 bytes (120 KB)
+#5 8.314 ==================================================
+#5 8.321 downloaded 120 KB
+#5 8.321 
+#5 8.322 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/fresh_0.2.0.tar.gz'
+#5 8.909 Content type 'binary/octet-stream' length 1492453 bytes (1.4 MB)
+#5 8.909 ==================================================
+#5 8.922 downloaded 1.4 MB
+#5 8.922 
+#5 8.926 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/waiter_0.2.5.tar.gz'
+#5 9.409 Content type 'binary/octet-stream' length 460590 bytes (449 KB)
+#5 9.410 ==================================================
+#5 9.417 downloaded 449 KB
+#5 9.417 
+#5 9.421 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/crosstalk_1.2.0.tar.gz'
+#5 9.896 Content type 'binary/octet-stream' length 403976 bytes (394 KB)
+#5 9.896 ==================================================
+#5 9.903 downloaded 394 KB
+#5 9.903 
+#5 9.907 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/anytime_0.3.9.tar.gz'
+#5 10.49 Content type 'binary/octet-stream' length 404734 bytes (395 KB)
+#5 10.49 ==================================================
+#5 10.50 downloaded 395 KB
+#5 10.50 
+#5 10.51 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/shinydashboard_0.7.2.tar.gz'
+#5 10.98 Content type 'binary/octet-stream' length 321346 bytes (313 KB)
+#5 10.98 ==================================================
+#5 10.99 downloaded 313 KB
+#5 10.99 
+#5 11.00 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/covr_3.6.1.tar.gz'
+#5 11.59 Content type 'binary/octet-stream' length 321561 bytes (314 KB)
+#5 11.59 ==================================================
+#5 11.59 downloaded 314 KB
+#5 11.59 
+#5 11.60 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/shinydashboardPlus_2.0.3.tar.gz'
+#5 12.18 Content type 'binary/octet-stream' length 873975 bytes (853 KB)
+#5 12.18 ==================================================
+#5 12.20 downloaded 853 KB
+#5 12.20 
+#5 12.20 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/bs4Dash_2.2.1.tar.gz'
+#5 12.79 Content type 'binary/octet-stream' length 1822243 bytes (1.7 MB)
+#5 12.79 ==================================================
+#5 12.80 downloaded 1.7 MB
+#5 12.80 
+#5 12.81 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/argonR_0.2.0.tar.gz'
+#5 13.27 Content type 'binary/octet-stream' length 1404280 bytes (1.3 MB)
+#5 13.27 ==================================================
+#5 13.29 downloaded 1.3 MB
+#5 13.29 
+#5 13.29 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/argonDash_0.2.0.tar.gz'
+#5 13.88 Content type 'binary/octet-stream' length 2080643 bytes (2.0 MB)
+#5 13.88 ==================================================
+#5 13.91 downloaded 2.0 MB
+#5 13.91 
+#5 13.91 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/tablerDash_0.1.0.tar.gz'
+#5 14.37 Content type 'binary/octet-stream' length 1216589 bytes (1.2 MB)
+#5 14.37 ==================================================
+#5 14.39 downloaded 1.2 MB
+#5 14.39 
+#5 14.39 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/DT_0.27.tar.gz'
+#5 14.80 Content type 'binary/octet-stream' length 1607071 bytes (1.5 MB)
+#5 14.80 ==================================================
+#5 14.81 downloaded 1.5 MB
+#5 14.81 
+#5 14.82 trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/shinyWidgets_0.7.6.tar.gz'
+#5 15.23 Content type 'binary/octet-stream' length 1242725 bytes (1.2 MB)
+#5 15.23 ==================================================
+#5 15.25 downloaded 1.2 MB
+#5 15.25 
+#5 15.58 * installing *binary* package ‘lazyeval’ ...
+#5 15.59 * DONE (lazyeval)
+#5 32.00 * installing *binary* package ‘BH’ ...
+#5 39.11 * DONE (BH)
+#5 40.32 * installing *binary* package ‘fresh’ ...
+#5 40.35 * DONE (fresh)
+#5 40.65 * installing *binary* package ‘waiter’ ...
+#5 40.66 * DONE (waiter)
+#5 40.96 * installing *binary* package ‘shinydashboard’ ...
+#5 40.97 * DONE (shinydashboard)
+#5 41.46 * installing *binary* package ‘argonR’ ...
+#5 41.48 * DONE (argonR)
+#5 42.00 * installing *binary* package ‘tablerDash’ ...
+#5 42.01 * DONE (tablerDash)
+#5 42.28 * installing *binary* package ‘rex’ ...
+#5 42.29 * DONE (rex)
+#5 42.60 * installing *binary* package ‘crosstalk’ ...
+#5 42.61 * DONE (crosstalk)
+#5 42.90 * installing *binary* package ‘anytime’ ...
+#5 42.91 * DONE (anytime)
+#5 43.32 * installing *binary* package ‘shinydashboardPlus’ ...
+#5 43.33 * DONE (shinydashboardPlus)
+#5 43.88 * installing *binary* package ‘bs4Dash’ ...
+#5 43.89 * DONE (bs4Dash)
+#5 44.45 * installing *binary* package ‘argonDash’ ...
+#5 44.46 * DONE (argonDash)
+#5 44.75 * installing *binary* package ‘covr’ ...
+#5 44.76 * DONE (covr)
+#5 45.50 * installing *binary* package ‘DT’ ...
+#5 45.54 * DONE (DT)
+#5 46.26 * installing *binary* package ‘shinyWidgets’ ...
+#5 46.29 * DONE (shinyWidgets)
+#5 46.31 
+#5 46.31 The downloaded source packages are in
+#5 46.31 	‘/tmp/downloaded_packages’
+#5 DONE 46.6s
+
+#6 [stage-0 3/9] RUN R -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))"
+#6 sha256:8a5a9fe77b085e4587b3a4b808a5db1bd0f1bc58520b2c06053f717066c626f7
+#6 0.743 
+#6 0.744 R version 4.2.2 (2022-10-31) -- "Innocent and Trusting"
+#6 0.744 Copyright (C) 2022 The R Foundation for Statistical Computing
+#6 0.744 Platform: x86_64-pc-linux-gnu (64-bit)
+#6 0.744 
+#6 0.744 R is free software and comes with ABSOLUTELY NO WARRANTY.
+#6 0.744 You are welcome to redistribute it under certain conditions.
+#6 0.744 Type 'license()' or 'licence()' for distribution details.
+#6 0.744 
+#6 0.746   Natural language support but running in an English locale
+#6 0.746 
+#6 0.746 R is a collaborative project with many contributors.
+#6 0.746 Type 'contributors()' for more information and
+#6 0.746 'citation()' on how to cite R or R packages in publications.
+#6 0.746 
+#6 0.746 Type 'demo()' for some demos, 'help()' for on-line help, or
+#6 0.746 'help.start()' for an HTML browser interface to help.
+#6 0.746 Type 'q()' to quit R.
+#6 0.746 
+#6 0.851 > install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))
+#6 0.856 Installing package into ‘/usr/local/lib/R/site-library’
+#6 0.856 (as ‘lib’ is unspecified)
+#6 2.082 trying URL 'https://cloud.r-project.org/src/contrib/remotes_2.4.2.tar.gz'
+#6 2.167 Content type 'application/x-gzip' length 152540 bytes (148 KB)
+#6 2.168 ==================================================
+#6 2.173 downloaded 148 KB
+#6 2.173 
+#6 2.512 * installing *source* package ‘remotes’ ...
+#6 2.518 ** package ‘remotes’ successfully unpacked and MD5 sums checked
+#6 2.562 ** using staged installation
+#6 2.585 ** R
+#6 2.608 ** inst
+#6 2.609 ** byte-compile and prepare package for lazy loading
+#6 4.725 ** help
+#6 4.827 *** installing help indices
+#6 4.894 ** building package indices
+#6 5.165 ** installing vignettes
+#6 5.173 ** testing if installed package can be loaded from temporary location
+#6 5.389 ** testing if installed package can be loaded from final location
+#6 5.648 ** testing if installed package keeps a record of temporary installation path
+#6 5.651 * DONE (remotes)
+#6 5.661 
+#6 5.661 The downloaded source packages are in
+#6 5.661 	‘/tmp/RtmpPDbOZ2/downloaded_packages’
+#6 5.661 > 
+#6 5.662 > 
+#6 DONE 5.7s
+
+#7 [stage-0 4/9] RUN R -e "remotes::install_github('rstudio/renv@0.16.0')"
+#7 sha256:d072784b516e9da1476cab9f51af5fda750e9a557f988201a40536701ce905dc
+#7 0.416 
+#7 0.416 R version 4.2.2 (2022-10-31) -- "Innocent and Trusting"
+#7 0.416 Copyright (C) 2022 The R Foundation for Statistical Computing
+#7 0.416 Platform: x86_64-pc-linux-gnu (64-bit)
+#7 0.416 
+#7 0.416 R is free software and comes with ABSOLUTELY NO WARRANTY.
+#7 0.416 You are welcome to redistribute it under certain conditions.
+#7 0.416 Type 'license()' or 'licence()' for distribution details.
+#7 0.416 
+#7 0.417   Natural language support but running in an English locale
+#7 0.417 
+#7 0.417 R is a collaborative project with many contributors.
+#7 0.417 Type 'contributors()' for more information and
+#7 0.417 'citation()' on how to cite R or R packages in publications.
+#7 0.417 
+#7 0.417 Type 'demo()' for some demos, 'help()' for on-line help, or
+#7 0.417 'help.start()' for an HTML browser interface to help.
+#7 0.417 Type 'q()' to quit R.
+#7 0.417 
+#7 0.525 > remotes::install_github('rstudio/renv@0.16.0')
+#7 0.784 Downloading GitHub repo rstudio/renv@0.16.0
+#7 2.539 ── R CMD build ─────────────────────────────────────────────────────────────────
+#7 2.773 * checking for file ‘/tmp/Rtmp4DrBU8/remotes65b466624/rstudio-renv-0e3aab2/DESCRIPTION’ ... OK
+#7 2.807 * preparing ‘renv’:
+#7 2.807 * checking DESCRIPTION meta-information ... OK
+#7 2.907 * checking for LF line-endings in source and make files and shell scripts
+#7 2.915 * checking for empty or unneeded directories
+#7 2.923 Removed empty directory ‘renv/tests/testthat/resources/dummy.Rmd’
+#7 2.932 * building ‘renv_0.16.0.tar.gz’
+#7 3.243 
+#7 3.320 Installing package into ‘/usr/local/lib/R/site-library’
+#7 3.320 (as ‘lib’ is unspecified)
+#7 3.879 * installing *source* package ‘renv’ ...
+#7 3.880 ** using staged installation
+#7 3.900 ** R
+#7 4.003 ** inst
+#7 4.005 ** byte-compile and prepare package for lazy loading
+#7 13.38 ** help
+#7 13.57 *** installing help indices
+#7 13.74 *** copying figures
+#7 13.74 ** building package indices
+#7 14.06 ** installing vignettes
+#7 14.06 ** testing if installed package can be loaded from temporary location
+#7 14.40 ** testing if installed package can be loaded from final location
+#7 14.97 ** testing if installed package keeps a record of temporary installation path
+#7 14.97 * DONE (renv)
+#7 15.00 > 
+#7 15.00 > 
+#7 DONE 15.1s
+
+#9 [stage-0 5/9] COPY app/renv.lock renv.lock
+#9 sha256:a60f7b346b5dbb861a2e9af4351261f7e33371a1f85f2a15b0b74acd1246429c
+#9 DONE 0.1s
+
+#10 [stage-0 6/9] RUN --mount=type=cache,target=/var/cache/renv R -e "renv::restore()"
+#10 sha256:a4c71669db52bd75d0b7463015a250ae49f4e6f9d457929f9faa9a7456efcd16
+#10 0.415 
+#10 0.415 R version 4.2.2 (2022-10-31) -- "Innocent and Trusting"
+#10 0.415 Copyright (C) 2022 The R Foundation for Statistical Computing
+#10 0.415 Platform: x86_64-pc-linux-gnu (64-bit)
+#10 0.415 
+#10 0.415 R is free software and comes with ABSOLUTELY NO WARRANTY.
+#10 0.415 You are welcome to redistribute it under certain conditions.
+#10 0.415 Type 'license()' or 'licence()' for distribution details.
+#10 0.415 
+#10 0.416   Natural language support but running in an English locale
+#10 0.416 
+#10 0.416 R is a collaborative project with many contributors.
+#10 0.416 Type 'contributors()' for more information and
+#10 0.416 'citation()' on how to cite R or R packages in publications.
+#10 0.416 
+#10 0.417 Type 'demo()' for some demos, 'help()' for on-line help, or
+#10 0.417 'help.start()' for an HTML browser interface to help.
+#10 0.417 Type 'q()' to quit R.
+#10 0.417 
+#10 0.514 > renv::restore()
+#10 2.003 The following package(s) will be updated:
+#10 2.004 
+#10 2.004 # Bioconductor =======================
+#10 2.004 - AnVIL                  [* -> 1.10.1]
+#10 2.004 - AnnotationDbi          [* -> 1.60.0]
+#10 2.005 - Biobase                [* -> 2.58.0]
+#10 2.005 - BiocBaseUtils          [* -> 1.0.0]
+#10 2.005 - BiocFileCache          [* -> 2.6.1]
+#10 2.005 - BiocGenerics           [* -> 0.44.0]
+#10 2.006 - BiocIO                 [* -> 1.8.0]
+#10 2.006 - BiocParallel           [* -> 1.32.5]
+#10 2.006 - BiocVersion            [* -> 3.16.0]
+#10 2.006 - Biostrings             [* -> 2.66.0]
+#10 2.006 - ComplexHeatmap         [* -> 2.14.0]
+#10 2.007 - DelayedArray           [* -> 0.24.0]
+#10 2.007 - GenomeInfoDb           [* -> 1.34.9]
+#10 2.007 - GenomeInfoDbData       [* -> 1.2.9]
+#10 2.007 - GenomicAlignments      [* -> 1.34.0]
+#10 2.007 - GenomicDataCommons     [* -> 1.22.1]
+#10 2.007 - GenomicFeatures        [* -> 1.50.4]
+#10 2.007 - GenomicRanges          [* -> 1.50.2]
+#10 2.007 - IRanges                [* -> 2.32.0]
+#10 2.007 - KEGGREST               [* -> 1.38.0]
+#10 2.007 - MatrixGenerics         [* -> 1.10.0]
+#10 2.007 - MultiAssayExperiment   [* -> 1.24.0]
+#10 2.007 - RTCGAToolbox           [* -> 2.28.0]
+#10 2.007 - RaggedExperiment       [* -> 1.22.0]
+#10 2.007 - Rhtslib                [* -> 2.0.0]
+#10 2.007 - Rsamtools              [* -> 2.14.0]
+#10 2.007 - S4Vectors              [* -> 0.36.1]
+#10 2.007 - SummarizedExperiment   [* -> 1.28.0]
+#10 2.007 - TCGAutils              [* -> 1.18.0]
+#10 2.007 - XVector                [* -> 0.38.0]
+#10 2.007 - biomaRt                [* -> 2.54.0]
+#10 2.007 - cBioPortalData         [* -> 2.10.3]
+#10 2.007 - limma                  [* -> 3.54.1]
+#10 2.007 - rtracklayer            [* -> 1.58.0]
+#10 2.007 - zlibbioc               [* -> 1.44.0]
+#10 2.007 
+#10 2.007 # CRAN ===============================
+#10 2.007 - MASS                   [7.3-58.1 -> 7.3-57]
+#10 2.007 - Matrix                 [1.5-1 -> 1.5-3]
+#10 2.007 - RSQLite                [repo: RSPM -> CRAN; ver: 2.2.20 -> 2.3.0]
+#10 2.007 - cluster                [2.1.4 -> 2.1.3]
+#10 2.007 - data.table             [repo: RSPM -> CRAN; ver: 1.14.6 -> 1.14.8]
+#10 2.007 - fs                     [repo: RSPM -> CRAN; ver: 1.6.0 -> 1.6.1]
+#10 2.007 - ggplot2                [repo: RSPM -> CRAN; ver: 3.4.0 -> 3.4.1]
+#10 2.007 - httpuv                 [repo: RSPM -> CRAN; ver: 1.6.8 -> 1.6.9]
+#10 2.007 - lubridate              [repo: RSPM -> CRAN; ver: 1.9.1 -> 1.9.2]
+#10 2.007 - mgcv                   [1.8-41 -> 1.8-40]
+#10 2.007 - nlme                   [3.1-160 -> 3.1-157]
+#10 2.007 - nnet                   [7.3-18 -> 7.3-17]
+#10 2.007 - readr                  [repo: RSPM -> CRAN; ver: 2.1.3 -> 2.1.4]
+#10 2.007 - readxl                 [repo: RSPM -> CRAN; ver: 1.4.1 -> 1.4.2]
+#10 2.007 - renv                   [rstudio/renv@0.16.0 -> 0.16.0]
+#10 2.007 - sourcetools            [repo: RSPM -> CRAN; ver: 0.1.7 -> 0.1.7-1]
+#10 2.012 - survival               [3.4-0 -> 3.3-1]
+#10 2.012 - tidyverse              [repo: RSPM -> CRAN; ver: 1.3.2 -> 2.0.0]
+#10 2.012 - tinytex                [repo: RSPM -> CRAN; ver: 0.43 -> 0.44]
+#10 2.012 - GetoptLong             [* -> 1.0.5]
+#10 2.012 - GlobalOptions          [* -> 0.1.2]
+#10 2.012 - KMsurv                 [* -> 0.1-5]
+#10 2.012 - MatrixModels           [* -> 0.5-1]
+#10 2.012 - RCircos                [* -> 1.2.2]
+#10 2.012 - RCurl                  [* -> 1.98-1.10]
+#10 2.012 - RJSONIO                [* -> 1.3-1.8]
+#10 2.012 - RcppEigen              [* -> 0.3.3.9.3]
+#10 2.012 - SparseM                [* -> 1.81]
+#10 2.012 - V8                     [* -> 4.2.2]
+#10 2.012 - XML                    [* -> 3.99-0.13]
+#10 2.012 - abind                  [* -> 1.4-5]
+#10 2.012 - bigD                   [* -> 0.2.0]
+#10 2.012 - bitops                 [* -> 1.0-7]
+#10 2.012 - broom.helpers          [* -> 1.12.0]
+#10 2.012 - car                    [* -> 3.1-1]
+#10 2.012 - carData                [* -> 3.0-5]
+#10 2.012 - circlize               [* -> 0.4.15]
+#10 2.012 - clue                   [* -> 0.3-64]
+#10 2.012 - conflicted             [* -> 1.2.0]
+#10 2.012 - corrplot               [* -> 0.92]
+#10 2.012 - cowplot                [* -> 1.1.1]
+#10 2.012 - doParallel             [* -> 1.0.17]
+#10 2.012 - exactRankTests         [* -> 0.8-35]
+#10 2.012 - filelock               [* -> 1.0.2]
+#10 2.012 - foreach                [* -> 1.5.2]
+#10 2.012 - formatR                [* -> 1.14]
+#10 2.012 - futile.logger          [* -> 1.4.3]
+#10 2.012 - futile.options         [* -> 1.0.1]
+#10 2.012 - ggplotify              [* -> 0.1.0]
+#10 2.012 - ggpubr                 [* -> 0.6.0]
+#10 2.012 - ggrepel                [* -> 0.9.3]
+#10 2.012 - ggsci                  [* -> 2.9]
+#10 2.012 - ggsignif               [* -> 0.6.4]
+#10 2.012 - ggtext                 [* -> 0.1.2]
+#10 2.012 - gridExtra              [* -> 2.3]
+#10 2.012 - gridGraphics           [* -> 0.5-1]
+#10 2.012 - gridtext               [* -> 0.1.5]
+#10 2.012 - gt                     [* -> 0.8.0]
+#10 2.012 - gtsummary              [* -> 1.7.0]
+#10 2.012 - iterators              [* -> 1.0.14]
+#10 2.012 - janitor                [* -> 2.2.0]
+#10 2.012 - jpeg                   [* -> 0.1-10]
+#10 2.012 - juicyjuice             [* -> 0.1.0]
+#10 2.012 - km.ci                  [* -> 0.5-6]
+#10 2.012 - labelled               [* -> 2.10.0]
+#10 2.012 - lambda.r               [* -> 1.2.4]
+#10 2.012 - lme4                   [* -> 1.1-31]
+#10 2.012 - markdown               [* -> 1.5]
+#10 2.012 - matrixStats            [* -> 0.63.0]
+#10 2.012 - maxstat                [* -> 0.7-25]
+#10 2.012 - minqa                  [* -> 1.2.5]
+#10 2.012 - mvtnorm                [* -> 1.1-3]
+#10 2.012 - nloptr                 [* -> 2.0.3]
+#10 2.012 - numDeriv               [* -> 2016.8-1.1]
+#10 2.012 - packrat                [* -> 0.9.0]
+#10 2.012 - patchwork              [* -> 1.1.2]
+#10 2.012 - pbkrtest               [* -> 0.5.2]
+#10 2.012 - plyr                   [* -> 1.8.7]
+#10 2.012 - png                    [* -> 0.1-8]
+#10 2.012 - polynom                [* -> 1.4-1]
+#10 2.012 - quantreg               [* -> 5.94]
+#10 2.012 - rapiclient             [* -> 0.1.3]
+#10 2.012 - restfulr               [* -> 0.0.15]
+#10 2.012 - rjson                  [* -> 0.2.21]
+#10 2.012 - rsconnect              [* -> 0.8.29]
+#10 2.012 - rstatix                [* -> 0.7.2]
+#10 2.012 - shadowtext             [* -> 0.1.2]
+#10 2.012 - shape                  [* -> 1.4.6]
+#10 2.012 - snakecase              [* -> 0.11.0]
+#10 2.012 - snow                   [* -> 0.4-4]
+#10 2.012 - survMisc               [* -> 0.5.6]
+#10 2.012 - survminer              [* -> 0.4.9]
+#10 2.012 - yulab.utils            [* -> 0.0.4]
+#10 2.012 - zoo                    [* -> 1.8-11]
+#10 2.012 
+#10 2.012 # GitHub =============================
+#10 2.012 - shinysky               [* -> AnalytixWare/ShinySky@HEAD]
+#10 2.012 
+#10 2.031 * Querying repositories for available source packages ... Done!
+#10 2.478 Retrieving 'https://cran.rstudio.com/src/contrib/data.table_1.14.8.tar.gz' ...
+#10 2.602 	OK [downloaded 5.1 Mb in 0.1 secs]
+#10 2.946 Retrieving 'https://cran.rstudio.com/src/contrib/fs_1.6.1.tar.gz' ...
+#10 3.045 	OK [downloaded 1.1 Mb in 0.1 secs]
+#10 3.163 Retrieving 'https://cran.rstudio.com/src/contrib/ggplot2_3.4.1.tar.gz' ...
+#10 3.268 	OK [downloaded 3 Mb in 0.1 secs]
+#10 3.729 Retrieving 'https://cran.rstudio.com/src/contrib/Archive/MASS/MASS_7.3-57.tar.gz' ...
+#10 3.822 	OK [downloaded 488.9 Kb in 0.1 secs]
+#10 3.918 Retrieving 'https://cran.rstudio.com/src/contrib/Archive/mgcv/mgcv_1.8-40.tar.gz' ...
+#10 4.035 	OK [downloaded 1.1 Mb in 0.1 secs]
+#10 4.169 Retrieving 'https://cran.rstudio.com/src/contrib/Matrix_1.5-3.tar.gz' ...
+#10 4.287 	OK [downloaded 2.1 Mb in 0.1 secs]
+#10 4.521 Retrieving 'https://cran.rstudio.com/src/contrib/Archive/nlme/nlme_3.1-157.tar.gz' ...
+#10 4.639 	OK [downloaded 826.4 Kb in 0.1 secs]
+#10 4.877 Retrieving 'https://cran.rstudio.com/src/contrib/httpuv_1.6.9.tar.gz' ...
+#10 4.980 	OK [downloaded 1.8 Mb in 0.1 secs]
+#10 5.157 Retrieving 'https://cran.rstudio.com/src/contrib/lubridate_1.9.2.tar.gz' ...
+#10 5.250 	OK [downloaded 417.2 Kb in 0.1 secs]
+#10 5.333 Retrieving 'https://cran.rstudio.com/src/contrib/readr_2.1.4.tar.gz' ...
+#10 5.424 	OK [downloaded 291.1 Kb in 0.1 secs]
+#10 5.601 Retrieving 'https://cran.rstudio.com/src/contrib/readxl_1.4.2.tar.gz' ...
+#10 5.705 	OK [downloaded 2 Mb in 0.1 secs]
+#10 5.825 Retrieving 'https://cran.rstudio.com/src/contrib/renv_0.16.0.tar.gz' ...
+#10 5.921 	OK [downloaded 981 Kb in 0.1 secs]
+#10 5.994 Retrieving 'https://cran.rstudio.com/src/contrib/RSQLite_2.3.0.tar.gz' ...
+#10 6.107 	OK [downloaded 3.9 Mb in 0.1 secs]
+#10 6.512 Retrieving 'https://cran.rstudio.com/src/contrib/sourcetools_0.1.7-1.tar.gz' ...
+#10 6.619 	OK [downloaded 23.5 Kb in 0.1 secs]
+#10 6.659 Retrieving 'https://cran.rstudio.com/src/contrib/tidyverse_2.0.0.tar.gz' ...
+#10 6.751 	OK [downloaded 688.1 Kb in 0.1 secs]
+#10 6.932 Retrieving 'https://cran.rstudio.com/src/contrib/conflicted_1.2.0.tar.gz' ...
+#10 7.021 	OK [downloaded 16.7 Kb in 0.1 secs]
+#10 7.536 Retrieving 'https://cran.rstudio.com/src/contrib/tinytex_0.44.tar.gz' ...
+#10 7.625 	OK [downloaded 32.2 Kb in 0.1 secs]
+#10 7.724 Retrieving 'https://cran.rstudio.com/src/contrib/Archive/cluster/cluster_2.1.3.tar.gz' ...
+#10 7.841 	OK [downloaded 392.6 Kb in 0.1 secs]
+#10 7.918 Retrieving 'https://cran.rstudio.com/src/contrib/Archive/nnet/nnet_7.3-17.tar.gz' ...
+#10 8.027 	OK [downloaded 28.4 Kb in 0.1 secs]
+#10 8.076 Retrieving 'https://cran.rstudio.com/src/contrib/Archive/survival/survival_3.3-1.tar.gz' ...
+#10 8.219 	OK [downloaded 6.3 Mb in 0.1 secs]
+#10 8.459 * Querying repositories for available source packages ... Done!
+#10 9.362 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/AnVIL_1.10.1.tar.gz' ...
+#10 9.464 	OK [downloaded 1.1 Mb in 0.1 secs]
+#10 9.902 Retrieving 'https://cran.rstudio.com/src/contrib/futile.logger_1.4.3.tar.gz' ...
+#10 9.991 	OK [downloaded 17 Kb in 0.1 secs]
+#10 10.08 Retrieving 'https://cran.rstudio.com/src/contrib/lambda.r_1.2.4.tar.gz' ...
+#10 10.17 	OK [downloaded 25.1 Kb in 0.1 secs]
+#10 10.25 Retrieving 'https://cran.rstudio.com/src/contrib/formatR_1.14.tar.gz' ...
+#10 10.35 	OK [downloaded 93.8 Kb in 0.1 secs]
+#10 10.45 Retrieving 'https://cran.rstudio.com/src/contrib/futile.options_1.0.1.tar.gz' ...
+#10 10.54 	OK [downloaded 3.8 Kb in 0.1 secs]
+#10 10.65 Retrieving 'https://cran.rstudio.com/src/contrib/rapiclient_0.1.3.tar.gz' ...
+#10 10.75 	OK [downloaded 17.4 Kb in 0.1 secs]
+#10 11.64 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/AnnotationDbi_1.60.0.tar.gz' ...
+#10 11.77 	OK [downloaded 4.1 Mb in 0.1 secs]
+#10 11.97 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/S4Vectors_0.36.1.tar.gz' ...
+#10 12.07 	OK [downloaded 608.6 Kb in 0.1 secs]
+#10 12.24 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BiocGenerics_0.44.0.tar.gz' ...
+#10 12.33 	OK [downloaded 46.6 Kb in 0.1 secs]
+#10 12.48 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/KEGGREST_1.38.0.tar.gz' ...
+#10 12.58 	OK [downloaded 25.2 Kb in 0.1 secs]
+#10 12.68 Retrieving 'https://cran.rstudio.com/src/contrib/png_0.1-8.tar.gz' ...
+#10 12.77 	OK [downloaded 24.3 Kb in 0.1 secs]
+#10 12.87 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/Biostrings_2.66.0.tar.gz' ...
+#10 13.04 	OK [downloaded 11.9 Mb in 0.2 secs]
+#10 13.52 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/IRanges_2.32.0.tar.gz' ...
+#10 13.62 	OK [downloaded 445.4 Kb in 0.1 secs]
+#10 13.83 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/XVector_0.38.0.tar.gz' ...
+#10 13.92 	OK [downloaded 66.2 Kb in 0.1 secs]
+#10 14.09 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/zlibbioc_1.44.0.tar.gz' ...
+#10 14.18 	OK [downloaded 209.2 Kb in 0.1 secs]
+#10 14.35 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/GenomeInfoDb_1.34.9.tar.gz' ...
+#10 14.46 	OK [downloaded 3.3 Mb in 0.1 secs]
+#10 14.68 Retrieving 'https://cran.rstudio.com/src/contrib/RCurl_1.98-1.10.tar.gz' ...
+#10 14.78 	OK [downloaded 714.3 Kb in 0.1 secs]
+#10 14.94 Retrieving 'https://cran.rstudio.com/src/contrib/bitops_1.0-7.tar.gz' ...
+#10 15.13 	OK [downloaded 10.6 Kb in 0.2 secs]
+#10 15.27 Retrieving 'https://bioconductor.org/packages/3.16/data/annotation/src/contrib/GenomeInfoDbData_1.2.9.tar.gz' ...
+#10 15.45 	OK [downloaded 11.2 Mb in 0.2 secs]
+#10 15.83 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/Biobase_2.58.0.tar.gz' ...
+#10 15.94 	OK [downloaded 1.7 Mb in 0.1 secs]
+#10 16.10 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BiocBaseUtils_1.0.0.tar.gz' ...
+#10 16.20 	OK [downloaded 222.5 Kb in 0.1 secs]
+#10 16.30 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BiocFileCache_2.6.1.tar.gz' ...
+#10 16.39 	OK [downloaded 292 Kb in 0.1 secs]
+#10 16.55 Retrieving 'https://cran.rstudio.com/src/contrib/filelock_1.0.2.tar.gz' ...
+#10 16.65 	OK [downloaded 12.1 Kb in 0.1 secs]
+#10 16.77 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BiocIO_1.8.0.tar.gz' ...
+#10 16.87 	OK [downloaded 223.9 Kb in 0.1 secs]
+#10 16.99 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BiocParallel_1.32.5.tar.gz' ...
+#10 17.10 	OK [downloaded 955.2 Kb in 0.1 secs]
+#10 17.25 Retrieving 'https://cran.rstudio.com/src/contrib/snow_0.4-4.tar.gz' ...
+#10 17.34 	OK [downloaded 20 Kb in 0.1 secs]
+#10 17.49 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BiocVersion_3.16.0.tar.gz' ...
+#10 17.58 	OK [downloaded 965 bytes in 0.1 secs]
+#10 17.64 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/ComplexHeatmap_2.14.0.tar.gz' ...
+#10 17.74 	OK [downloaded 1.4 Mb in 0.1 secs]
+#10 17.84 Retrieving 'https://cran.rstudio.com/src/contrib/circlize_0.4.15.tar.gz' ...
+#10 17.95 	OK [downloaded 2.4 Mb in 0.1 secs]
+#10 18.08 Retrieving 'https://cran.rstudio.com/src/contrib/GlobalOptions_0.1.2.tar.gz' ...
+#10 18.18 	OK [downloaded 298.7 Kb in 0.1 secs]
+#10 18.31 Retrieving 'https://cran.rstudio.com/src/contrib/shape_1.4.6.tar.gz' ...
+#10 18.41 	OK [downloaded 661.4 Kb in 0.1 secs]
+#10 18.62 Retrieving 'https://cran.rstudio.com/src/contrib/GetoptLong_1.0.5.tar.gz' ...
+#10 18.72 	OK [downloaded 749.7 Kb in 0.1 secs]
+#10 18.83 Retrieving 'https://cran.rstudio.com/src/contrib/rjson_0.2.21.tar.gz' ...
+#10 18.93 	OK [downloaded 113.8 Kb in 0.1 secs]
+#10 19.06 Retrieving 'https://cran.rstudio.com/src/contrib/clue_0.3-64.tar.gz' ...
+#10 19.17 	OK [downloaded 590.8 Kb in 0.1 secs]
+#10 19.37 Retrieving 'https://cran.rstudio.com/src/contrib/matrixStats_0.63.0.tar.gz' ...
+#10 19.48 	OK [downloaded 198.2 Kb in 0.1 secs]
+#10 19.58 Retrieving 'https://cran.rstudio.com/src/contrib/foreach_1.5.2.tar.gz' ...
+#10 19.67 	OK [downloaded 87.7 Kb in 0.1 secs]
+#10 19.77 Retrieving 'https://cran.rstudio.com/src/contrib/iterators_1.0.14.tar.gz' ...
+#10 19.86 	OK [downloaded 293.2 Kb in 0.1 secs]
+#10 19.97 Retrieving 'https://cran.rstudio.com/src/contrib/doParallel_1.0.17.tar.gz' ...
+#10 20.06 	OK [downloaded 160.4 Kb in 0.1 secs]
+#10 20.26 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/DelayedArray_0.24.0.tar.gz' ...
+#10 20.36 	OK [downloaded 627.9 Kb in 0.1 secs]
+#10 20.54 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/MatrixGenerics_1.10.0.tar.gz' ...
+#10 20.64 	OK [downloaded 27.9 Kb in 0.1 secs]
+#10 20.73 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/GenomicAlignments_1.34.0.tar.gz' ...
+#10 20.84 	OK [downloaded 2.1 Mb in 0.1 secs]
+#10 21.04 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/GenomicRanges_1.50.2.tar.gz' ...
+#10 21.14 	OK [downloaded 1.1 Mb in 0.1 secs]
+#10 21.39 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/Rsamtools_2.14.0.tar.gz' ...
+#10 21.81 	OK [downloaded 2.7 Mb in 0.4 secs]
+#10 22.14 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/Rhtslib_2.0.0.tar.gz' ...
+#10 22.26 	OK [downloaded 4.4 Mb in 0.1 secs]
+#10 22.59 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/SummarizedExperiment_1.28.0.tar.gz' ...
+#10 22.69 	OK [downloaded 1.5 Mb in 0.1 secs]
+#10 22.96 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/GenomicDataCommons_1.22.1.tar.gz' ...
+#10 23.08 	OK [downloaded 2.3 Mb in 0.1 secs]
+#10 23.39 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/GenomicFeatures_1.50.4.tar.gz' ...
+#10 23.48 	OK [downloaded 1.1 Mb in 0.1 secs]
+#10 23.74 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/rtracklayer_1.58.0.tar.gz' ...
+#10 23.87 	OK [downloaded 3.8 Mb in 0.1 secs]
+#10 24.05 Retrieving 'https://cran.rstudio.com/src/contrib/XML_3.99-0.13.tar.gz' ...
+#10 24.15 	OK [downloaded 948 Kb in 0.1 secs]
+#10 24.47 Retrieving 'https://cran.rstudio.com/src/contrib/restfulr_0.0.15.tar.gz' ...
+#10 24.57 	OK [downloaded 14.7 Kb in 0.1 secs]
+#10 24.77 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/biomaRt_2.54.0.tar.gz' ...
+#10 24.87 	OK [downloaded 652.5 Kb in 0.1 secs]
+#10 25.15 Retrieving 'https://cran.rstudio.com/src/contrib/KMsurv_0.1-5.tar.gz' ...
+#10 25.25 	OK [downloaded 69.2 Kb in 0.1 secs]
+#10 25.29 Retrieving 'https://cran.rstudio.com/src/contrib/MatrixModels_0.5-1.tar.gz' ...
+#10 25.40 	OK [downloaded 23.5 Kb in 0.1 secs]
+#10 25.45 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/MultiAssayExperiment_1.24.0.tar.gz' ...
+#10 25.55 	OK [downloaded 1.1 Mb in 0.1 secs]
+#10 25.78 Retrieving 'https://cran.rstudio.com/src/contrib/RCircos_1.2.2.tar.gz' ...
+#10 25.91 	OK [downloaded 1.8 Mb in 0.1 secs]
+#10 25.98 Retrieving 'https://cran.rstudio.com/src/contrib/RJSONIO_1.3-1.8.tar.gz' ...
+#10 26.09 	OK [downloaded 1.1 Mb in 0.1 secs]
+#10 26.18 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/RTCGAToolbox_2.28.0.tar.gz' ...
+#10 26.31 	OK [downloaded 2.3 Mb in 0.1 secs]
+#10 26.52 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/limma_3.54.1.tar.gz' ...
+#10 26.62 	OK [downloaded 1.4 Mb in 0.1 secs]
+#10 26.83 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/RaggedExperiment_1.22.0.tar.gz' ...
+#10 26.93 	OK [downloaded 371.3 Kb in 0.1 secs]
+#10 27.28 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/TCGAutils_1.18.0.tar.gz' ...
+#10 27.38 	OK [downloaded 384.9 Kb in 0.1 secs]
+#10 27.66 Retrieving 'https://cran.rstudio.com/src/contrib/RcppEigen_0.3.3.9.3.tar.gz' ...
+#10 27.78 	OK [downloaded 1.4 Mb in 0.1 secs]
+#10 27.92 Retrieving 'https://cran.rstudio.com/src/contrib/SparseM_1.81.tar.gz' ...
+#10 28.02 	OK [downloaded 717.9 Kb in 0.1 secs]
+#10 28.09 Retrieving 'https://cran.rstudio.com/src/contrib/V8_4.2.2.tar.gz' ...
+#10 28.20 	OK [downloaded 667.1 Kb in 0.1 secs]
+#10 28.28 Retrieving 'https://cran.rstudio.com/src/contrib/abind_1.4-5.tar.gz' ...
+#10 28.37 	OK [downloaded 21.3 Kb in 0.1 secs]
+#10 28.41 Retrieving 'https://cran.rstudio.com/src/contrib/bigD_0.2.0.tar.gz' ...
+#10 28.52 	OK [downloaded 1.2 Mb in 0.1 secs]
+#10 28.58 Retrieving 'https://cran.rstudio.com/src/contrib/broom.helpers_1.12.0.tar.gz' ...
+#10 28.69 	OK [downloaded 186.8 Kb in 0.1 secs]
+#10 28.76 Retrieving 'https://cran.rstudio.com/src/contrib/labelled_2.10.0.tar.gz' ...
+#10 28.85 	OK [downloaded 226.3 Kb in 0.1 secs]
+#10 28.93 Retrieving 'https://bioconductor.org/packages/3.16/bioc/src/contrib/cBioPortalData_2.10.3.tar.gz' ...
+#10 29.05 	OK [downloaded 1013.1 Kb in 0.1 secs]
+#10 29.44 Retrieving 'https://cran.rstudio.com/src/contrib/car_3.1-1.tar.gz' ...
+#10 29.54 	OK [downloaded 565.3 Kb in 0.1 secs]
+#10 29.62 Retrieving 'https://cran.rstudio.com/src/contrib/pbkrtest_0.5.2.tar.gz' ...
+#10 29.72 	OK [downloaded 73.5 Kb in 0.1 secs]
+#10 29.79 Retrieving 'https://cran.rstudio.com/src/contrib/numDeriv_2016.8-1.1.tar.gz' ...
+#10 29.88 	OK [downloaded 74.3 Kb in 0.1 secs]
+#10 29.95 Retrieving 'https://cran.rstudio.com/src/contrib/lme4_1.1-31.tar.gz' ...
+#10 30.06 	OK [downloaded 2.8 Mb in 0.1 secs]
+#10 30.23 Retrieving 'https://cran.rstudio.com/src/contrib/minqa_1.2.5.tar.gz' ...
+#10 30.33 	OK [downloaded 53.1 Kb in 0.1 secs]
+#10 30.40 Retrieving 'https://cran.rstudio.com/src/contrib/nloptr_2.0.3.tar.gz' ...
+#10 30.52 	OK [downloaded 2.1 Mb in 0.1 secs]
+#10 30.71 Retrieving 'https://cran.rstudio.com/src/contrib/quantreg_5.94.tar.gz' ...
+#10 30.81 	OK [downloaded 1001.3 Kb in 0.1 secs]
+#10 30.92 Retrieving 'https://cran.rstudio.com/src/contrib/carData_3.0-5.tar.gz' ...
+#10 31.03 	OK [downloaded 980.7 Kb in 0.1 secs]
+#10 31.08 Retrieving 'https://cran.rstudio.com/src/contrib/corrplot_0.92.tar.gz' ...
+#10 31.21 	OK [downloaded 3.6 Mb in 0.1 secs]
+#10 31.33 Retrieving 'https://cran.rstudio.com/src/contrib/cowplot_1.1.1.tar.gz' ...
+#10 31.43 	OK [downloaded 1.3 Mb in 0.1 secs]
+#10 31.52 Retrieving 'https://cran.rstudio.com/src/contrib/exactRankTests_0.8-35.tar.gz' ...
+#10 31.62 	OK [downloaded 45.8 Kb in 0.1 secs]
+#10 31.67 Retrieving 'https://cran.rstudio.com/src/contrib/ggplotify_0.1.0.tar.gz' ...
+#10 31.76 	OK [downloaded 115 Kb in 0.1 secs]
+#10 31.81 Retrieving 'https://cran.rstudio.com/src/contrib/gridGraphics_0.5-1.tar.gz' ...
+#10 31.90 	OK [downloaded 67.6 Kb in 0.1 secs]
+#10 31.98 Retrieving 'https://cran.rstudio.com/src/contrib/Archive/yulab.utils/yulab.utils_0.0.4.tar.gz' ...
+#10 32.08 	OK [downloaded 5.5 Kb in 0.1 secs]
+#10 32.12 Retrieving 'https://cran.rstudio.com/src/contrib/ggpubr_0.6.0.tar.gz' ...
+#10 32.23 	OK [downloaded 1.9 Mb in 0.1 secs]
+#10 32.33 Retrieving 'https://cran.rstudio.com/src/contrib/ggrepel_0.9.3.tar.gz' ...
+#10 32.41 	OK [downloaded 133 Kb in 0.1 secs]
+#10 32.48 Retrieving 'https://cran.rstudio.com/src/contrib/ggsci_2.9.tar.gz' ...
+#10 32.61 	OK [downloaded 2.7 Mb in 0.1 secs]
+#10 32.74 Retrieving 'https://cran.rstudio.com/src/contrib/ggsignif_0.6.4.tar.gz' ...
+#10 32.85 	OK [downloaded 573.6 Kb in 0.1 secs]
+#10 32.92 Retrieving 'https://cran.rstudio.com/src/contrib/gridExtra_2.3.tar.gz' ...
+#10 33.02 	OK [downloaded 1 Mb in 0.1 secs]
+#10 33.10 Retrieving 'https://cran.rstudio.com/src/contrib/polynom_1.4-1.tar.gz' ...
+#10 33.21 	OK [downloaded 327 Kb in 0.1 secs]
+#10 33.28 Retrieving 'https://cran.rstudio.com/src/contrib/rstatix_0.7.2.tar.gz' ...
+#10 33.37 	OK [downloaded 395.8 Kb in 0.1 secs]
+#10 33.44 Retrieving 'https://cran.rstudio.com/src/contrib/ggtext_0.1.2.tar.gz' ...
+#10 33.55 	OK [downloaded 1.2 Mb in 0.1 secs]
+#10 33.63 Retrieving 'https://cran.rstudio.com/src/contrib/gridtext_0.1.5.tar.gz' ...
+#10 33.73 	OK [downloaded 377.5 Kb in 0.1 secs]
+#10 33.80 Retrieving 'https://cran.rstudio.com/src/contrib/markdown_1.5.tar.gz' ...
+#10 33.89 	OK [downloaded 40.7 Kb in 0.1 secs]
+#10 33.96 Retrieving 'https://cran.rstudio.com/src/contrib/jpeg_0.1-10.tar.gz' ...
+#10 34.05 	OK [downloaded 18.2 Kb in 0.1 secs]
+#10 34.09 Retrieving 'https://cran.rstudio.com/src/contrib/gt_0.8.0.tar.gz' ...
+#10 34.41 	OK [downloaded 1.2 Mb in 0.3 secs]
+#10 34.52 Retrieving 'https://cran.rstudio.com/src/contrib/juicyjuice_0.1.0.tar.gz' ...
+#10 34.64 	OK [downloaded 1.1 Mb in 0.1 secs]
+#10 34.70 Retrieving 'https://cran.rstudio.com/src/contrib/gtsummary_1.7.0.tar.gz' ...
+#10 34.83 	OK [downloaded 1.9 Mb in 0.1 secs]
+#10 35.02 Retrieving 'https://cran.rstudio.com/src/contrib/janitor_2.2.0.tar.gz' ...
+#10 35.11 	OK [downloaded 230.9 Kb in 0.1 secs]
+#10 35.19 Retrieving 'https://cran.rstudio.com/src/contrib/snakecase_0.11.0.tar.gz' ...
+#10 35.28 	OK [downloaded 448.9 Kb in 0.1 secs]
+#10 35.33 Retrieving 'https://cran.rstudio.com/src/contrib/km.ci_0.5-6.tar.gz' ...
+#10 35.44 	OK [downloaded 28.6 Kb in 0.1 secs]
+#10 35.48 Retrieving 'https://cran.rstudio.com/src/contrib/maxstat_0.7-25.tar.gz' ...
+#10 35.58 	OK [downloaded 108.1 Kb in 0.1 secs]
+#10 35.64 Retrieving 'https://cran.rstudio.com/src/contrib/mvtnorm_1.1-3.tar.gz' ...
+#10 35.74 	OK [downloaded 162.5 Kb in 0.1 secs]
+#10 35.78 Retrieving 'https://cran.rstudio.com/src/contrib/packrat_0.9.0.tar.gz' ...
+#10 35.88 	OK [downloaded 335.5 Kb in 0.1 secs]
+#10 35.93 Retrieving 'https://cran.rstudio.com/src/contrib/patchwork_1.1.2.tar.gz' ...
+#10 36.04 	OK [downloaded 3 Mb in 0.1 secs]
+#10 36.18 Retrieving 'https://cran.rstudio.com/src/contrib/Archive/plyr/plyr_1.8.7.tar.gz' ...
+#10 36.28 	OK [downloaded 392.1 Kb in 0.1 secs]
+#10 36.34 Retrieving 'https://cran.rstudio.com/src/contrib/rsconnect_0.8.29.tar.gz' ...
+#10 36.43 	OK [downloaded 404 Kb in 0.1 secs]
+#10 36.49 Retrieving 'https://cran.rstudio.com/src/contrib/shadowtext_0.1.2.tar.gz' ...
+#10 36.59 	OK [downloaded 182.8 Kb in 0.1 secs]
+#10 36.63 Retrieving 'https://api.github.com/repos/AnalytixWare/ShinySky/tarball/695b4b95dac2bdf217f21f2aa9703b53380f1670' ...
+#10 37.10 	OK [downloaded 766.1 Kb in 0.5 secs]
+#10 37.17 Retrieving 'https://cran.rstudio.com/src/contrib/survMisc_0.5.6.tar.gz' ...
+#10 37.28 	OK [downloaded 155.5 Kb in 0.1 secs]
+#10 37.35 Retrieving 'https://cran.rstudio.com/src/contrib/zoo_1.8-11.tar.gz' ...
+#10 37.45 	OK [downloaded 763.6 Kb in 0.1 secs]
+#10 37.53 Retrieving 'https://cran.rstudio.com/src/contrib/survminer_0.4.9.tar.gz' ...
+#10 37.67 	OK [downloaded 3.4 Mb in 0.1 secs]
+#10 37.96 Installing data.table [1.14.8] ...
+#10 63.88 	OK [built from source]
+#10 63.88 Copying data.table [1.14.8] into the cache ...
+#10 63.91 	OK [copied to cache in 24 milliseconds]
+#10 63.97 Installing fs [1.6.1] ...
+#10 90.97 	OK [built from source]
+#10 90.97 Copying fs [1.6.1] into the cache ...
+#10 90.98 	OK [copied to cache in 12 milliseconds]
+#10 91.01 Installing MASS [7.3-57] ...
+#10 99.36 	OK [built from source]
+#10 99.36 Copying MASS [7.3-57] into the cache ...
+#10 99.37 	OK [copied to cache in 12 milliseconds]
+#10 99.45 Installing Matrix [1.5-3] ...
+#10 229.3 	OK [built from source]
+#10 229.3 Copying Matrix [1.5-3] into the cache ...
+#10 229.4 	OK [copied to cache in 0.14 seconds]
+#10 229.4 Installing nlme [3.1-157] ...
+#10 249.2 	OK [built from source]
+#10 249.2 Copying nlme [3.1-157] into the cache ...
+#10 249.3 	OK [copied to cache in 14 milliseconds]
+#10 249.3 Installing mgcv [1.8-40] ...
+#10 307.1 	OK [built from source]
+#10 307.1 Copying mgcv [1.8-40] into the cache ...
+#10 307.1 	OK [copied to cache in 26 milliseconds]
+#10 307.2 Installing ggplot2 [3.4.1] ...
+#10 325.5 	OK [built from source]
+#10 325.5 Copying ggplot2 [3.4.1] into the cache ...
+#10 325.6 	OK [copied to cache in 14 milliseconds]
+#10 325.6 Installing httpuv [1.6.9] ...
+#10 456.7 	OK [built from source]
+#10 456.7 Copying httpuv [1.6.9] into the cache ...
+#10 456.7 	OK [copied to cache in 25 milliseconds]
+#10 456.7 Installing lubridate [1.9.2] ...
+#10 464.6 	OK [built from source]
+#10 464.6 Copying lubridate [1.9.2] into the cache ...
+#10 464.7 	OK [copied to cache in 11 milliseconds]
+#10 464.7 Installing readr [2.1.4] ...
+#10 509.6 	OK [built from source]
+#10 509.7 Copying readr [2.1.4] into the cache ...
+#10 509.7 	OK [copied to cache in 18 milliseconds]
+#10 509.7 Installing readxl [1.4.2] ...
+#10 529.3 	OK [built from source]
+#10 529.3 Copying readxl [1.4.2] into the cache ...
+#10 529.4 	OK [copied to cache in 16 milliseconds]
+#10 529.4 Installing renv [0.16.0] ...
+#10 541.0 	OK [built from source]
+#10 541.0 Copying renv [0.16.0] into the cache ...
+#10 541.1 	OK [copied to cache in 13 milliseconds]
+#10 541.3 Installing RSQLite [2.3.0] ...
+#10 635.9 	OK [built from source]
+#10 635.9 Copying RSQLite [2.3.0] into the cache ...
+#10 635.9 	OK [copied to cache in 28 milliseconds]
+#10 635.9 Installing sourcetools [0.1.7-1] ...
+#10 640.5 	OK [built from source]
+#10 640.5 Copying sourcetools [0.1.7-1] into the cache ...
+#10 640.5 	OK [copied to cache in 11 milliseconds]
+#10 640.5 Installing conflicted [1.2.0] ...
+#10 642.4 	OK [built from source]
+#10 642.4 Copying conflicted [1.2.0] into the cache ...
+#10 642.4 	OK [copied to cache in 8 milliseconds]
+#10 642.4 Installing tinytex [0.44] ...
+#10 644.4 	OK [built from source]
+#10 644.4 Copying tinytex [0.44] into the cache ...
+#10 644.4 	OK [copied to cache in 8.5 milliseconds]
+#10 644.4 Installing tidyverse [2.0.0] ...
+#10 648.7 	OK [built from source]
+#10 648.7 Copying tidyverse [2.0.0] into the cache ...
+#10 648.7 	OK [copied to cache in 9.5 milliseconds]
+#10 648.7 Installing cluster [2.1.3] ...
+#10 655.7 	OK [built from source]
+#10 655.7 Copying cluster [2.1.3] into the cache ...
+#10 655.7 	OK [copied to cache in 11 milliseconds]
+#10 655.7 Installing nnet [7.3-17] ...
+#10 658.1 	OK [built from source]
+#10 658.1 Copying nnet [7.3-17] into the cache ...
+#10 658.1 	OK [copied to cache in 9.4 milliseconds]
+#10 658.2 Installing survival [3.3-1] ...
+#10 699.2 	OK [built from source]
+#10 699.2 Copying survival [3.3-1] into the cache ...
+#10 699.3 	OK [copied to cache in 56 milliseconds]
+#10 699.3 Installing formatR [1.14] ...
+#10 700.9 	OK [built from source]
+#10 700.9 Copying formatR [1.14] into the cache ...
+#10 700.9 	OK [copied to cache in 9.1 milliseconds]
+#10 700.9 Installing lambda.r [1.2.4] ...
+#10 702.9 	OK [built from source]
+#10 702.9 Copying lambda.r [1.2.4] into the cache ...
+#10 702.9 	OK [copied to cache in 8.1 milliseconds]
+#10 702.9 Installing futile.options [1.0.1] ...
+#10 704.1 	OK [built from source]
+#10 704.1 Copying futile.options [1.0.1] into the cache ...
+#10 704.1 	OK [copied to cache in 8.2 milliseconds]
+#10 704.1 Installing futile.logger [1.4.3] ...
+#10 706.0 	OK [built from source]
+#10 706.0 Copying futile.logger [1.4.3] into the cache ...
+#10 706.0 	OK [copied to cache in 8.3 milliseconds]
+#10 706.0 Installing rapiclient [0.1.3] ...
+#10 707.7 	OK [built from source]
+#10 707.7 Copying rapiclient [0.1.3] into the cache ...
+#10 707.7 	OK [copied to cache in 9.5 milliseconds]
+#10 707.8 Installing AnVIL [1.10.1] ...
+#10 714.0 	OK [built from source]
+#10 714.0 Copying AnVIL [1.10.1] into the cache ...
+#10 714.0 	OK [copied to cache in 13 milliseconds]
+#10 714.0 Installing BiocGenerics [0.44.0] ...
+#10 718.1 	OK [built from source]
+#10 718.1 Copying BiocGenerics [0.44.0] into the cache ...
+#10 718.1 	OK [copied to cache in 9.4 milliseconds]
+#10 718.1 Installing S4Vectors [0.36.1] ...
+#10 742.6 	OK [built from source]
+#10 742.6 Copying S4Vectors [0.36.1] into the cache ...
+#10 742.6 	OK [copied to cache in 14 milliseconds]
+#10 742.6 Installing png [0.1-8] ...
+#10 744.3 	OK [built from source]
+#10 744.3 Copying png [0.1-8] into the cache ...
+#10 744.3 	OK [copied to cache in 8.5 milliseconds]
+#10 744.4 Installing IRanges [2.32.0] ...
+#10 804.4 	OK [built from source]
+#10 804.4 Copying IRanges [2.32.0] into the cache ...
+#10 804.4 	OK [copied to cache in 61 milliseconds]
+#10 804.5 Installing zlibbioc [1.44.0] ...
+#10 806.3 	OK [built from source]
+#10 806.3 Copying zlibbioc [1.44.0] into the cache ...
+#10 806.3 	OK [copied to cache in 8.7 milliseconds]
+#10 806.3 Installing XVector [0.38.0] ...
+#10 820.7 	OK [built from source]
+#10 820.7 Copying XVector [0.38.0] into the cache ...
+#10 820.7 	OK [copied to cache in 9.6 milliseconds]
+#10 820.7 Installing bitops [1.0-7] ...
+#10 822.2 	OK [built from source]
+#10 822.2 Copying bitops [1.0-7] into the cache ...
+#10 822.2 	OK [copied to cache in 7.9 milliseconds]
+#10 822.3 Installing RCurl [1.98-1.10] ...
+#10 833.7 	OK [built from source]
+#10 833.7 Copying RCurl [1.98-1.10] into the cache ...
+#10 833.7 	OK [copied to cache in 14 milliseconds]
+#10 833.9 Installing GenomeInfoDbData [1.2.9] ...
+#10 835.3 	OK [built from source]
+#10 835.3 Copying GenomeInfoDbData [1.2.9] into the cache ...
+#10 835.3 	OK [copied to cache in 21 milliseconds]
+#10 835.4 Installing GenomeInfoDb [1.34.9] ...
+#10 847.8 	OK [built from source]
+#10 847.8 Copying GenomeInfoDb [1.34.9] into the cache ...
+#10 847.8 	OK [copied to cache in 25 milliseconds]
+#10 848.0 Installing Biostrings [2.66.0] ...
+#10 882.4 	OK [built from source]
+#10 882.4 Copying Biostrings [2.66.0] into the cache ...
+#10 882.5 	OK [copied to cache in 80 milliseconds]
+#10 882.5 Installing KEGGREST [1.38.0] ...
+#10 892.8 	OK [built from source]
+#10 892.8 Copying KEGGREST [1.38.0] into the cache ...
+#10 892.8 	OK [copied to cache in 8.7 milliseconds]
+#10 892.9 Installing Biobase [2.58.0] ...
+#10 902.9 	OK [built from source]
+#10 902.9 Copying Biobase [2.58.0] into the cache ...
+#10 902.9 	OK [copied to cache in 18 milliseconds]
+#10 903.0 Installing AnnotationDbi [1.60.0] ...
+#10 923.9 	OK [built from source]
+#10 923.9 Copying AnnotationDbi [1.60.0] into the cache ...
+#10 924.0 	OK [copied to cache in 0.14 seconds]
+#10 924.0 Installing BiocBaseUtils [1.0.0] ...
+#10 925.3 	OK [built from source]
+#10 925.3 Copying BiocBaseUtils [1.0.0] into the cache ...
+#10 925.3 	OK [copied to cache in 9.6 milliseconds]
+#10 925.4 Installing filelock [1.0.2] ...
+#10 926.9 	OK [built from source]
+#10 926.9 Copying filelock [1.0.2] into the cache ...
+#10 926.9 	OK [copied to cache in 8.5 milliseconds]
+#10 926.9 Installing BiocFileCache [2.6.1] ...
+#10 933.6 	OK [built from source]
+#10 933.6 Copying BiocFileCache [2.6.1] into the cache ...
+#10 933.7 	OK [copied to cache in 9.5 milliseconds]
+#10 933.7 Installing BiocIO [1.8.0] ...
+#10 938.1 	OK [built from source]
+#10 938.1 Copying BiocIO [1.8.0] into the cache ...
+#10 938.1 	OK [copied to cache in 9.1 milliseconds]
+#10 938.1 Installing snow [0.4-4] ...
+#10 939.8 	OK [built from source]
+#10 939.9 Copying snow [0.4-4] into the cache ...
+#10 939.9 	OK [copied to cache in 8.2 milliseconds]
+#10 939.9 Installing BiocParallel [1.32.5] ...
+#10 955.3 	OK [built from source]
+#10 955.3 Copying BiocParallel [1.32.5] into the cache ...
+#10 955.4 	OK [copied to cache in 16 milliseconds]
+#10 955.4 Installing BiocVersion [3.16.0] ...
+#10 956.3 	OK [built from source]
+#10 956.3 Copying BiocVersion [3.16.0] into the cache ...
+#10 956.3 	OK [copied to cache in 7.5 milliseconds]
+#10 956.3 Installing GlobalOptions [0.1.2] ...
+#10 958.4 	OK [built from source]
+#10 958.5 Copying GlobalOptions [0.1.2] into the cache ...
+#10 958.5 	OK [copied to cache in 9.1 milliseconds]
+#10 958.5 Installing shape [1.4.6] ...
+#10 960.4 	OK [built from source]
+#10 960.4 Copying shape [1.4.6] into the cache ...
+#10 960.4 	OK [copied to cache in 9.2 milliseconds]
+#10 960.5 Installing circlize [0.4.15] ...
+#10 970.4 	OK [built from source]
+#10 970.4 Copying circlize [0.4.15] into the cache ...
+#10 970.4 	OK [copied to cache in 12 milliseconds]
+#10 970.4 Installing rjson [0.2.21] ...
+#10 973.1 	OK [built from source]
+#10 973.1 Copying rjson [0.2.21] into the cache ...
+#10 973.1 	OK [copied to cache in 10 milliseconds]
+#10 973.1 Installing GetoptLong [1.0.5] ...
+#10 976.5 	OK [built from source]
+#10 976.5 Copying GetoptLong [1.0.5] into the cache ...
+#10 976.5 	OK [copied to cache in 11 milliseconds]
+#10 976.5 Installing clue [0.3-64] ...
+#10 982.4 	OK [built from source]
+#10 982.4 Copying clue [0.3-64] into the cache ...
+#10 982.4 	OK [copied to cache in 10 milliseconds]
+#10 982.4 Installing matrixStats [0.63.0] ...
+#10 995.5 	OK [built from source]
+#10 995.5 Copying matrixStats [0.63.0] into the cache ...
+#10 995.6 	OK [copied to cache in 15 milliseconds]
+#10 995.6 Installing iterators [1.0.14] ...
+#10 997.2 	OK [built from source]
+#10 997.2 Copying iterators [1.0.14] into the cache ...
+#10 997.2 	OK [copied to cache in 10 milliseconds]
+#10 997.2 Installing foreach [1.5.2] ...
+#10 999.0 	OK [built from source]
+#10 999.0 Copying foreach [1.5.2] into the cache ...
+#10 999.0 	OK [copied to cache in 10 milliseconds]
+#10 999.0 Installing doParallel [1.0.17] ...
+#10 1000.5 	OK [built from source]
+#10 1000.5 Copying doParallel [1.0.17] into the cache ...
+#10 1000.5 	OK [copied to cache in 8.6 milliseconds]
+#10 1000.5 Installing ComplexHeatmap [2.14.0] ...
+#10 1023.4 	OK [built from source]
+#10 1023.4 Copying ComplexHeatmap [2.14.0] into the cache ...
+#10 1023.4 	OK [copied to cache in 13 milliseconds]
+#10 1023.4 Installing MatrixGenerics [1.10.0] ...
+#10 1026.8 	OK [built from source]
+#10 1026.8 Copying MatrixGenerics [1.10.0] into the cache ...
+#10 1026.8 	OK [copied to cache in 8.7 milliseconds]
+#10 1026.8 Installing DelayedArray [0.24.0] ...
+#10 1058.1 	OK [built from source]
+#10 1058.1 Copying DelayedArray [0.24.0] into the cache ...
+#10 1058.1 	OK [copied to cache in 37 milliseconds]
+#10 1058.2 Installing GenomicRanges [1.50.2] ...
+#10 1081.1 	OK [built from source]
+#10 1081.1 Copying GenomicRanges [1.50.2] into the cache ...
+#10 1081.1 	OK [copied to cache in 13 milliseconds]
+#10 1081.2 Installing Rhtslib [2.0.0] ...
+#10 1107.4 	FAILED
+#10 1107.4 Error installing package 'Rhtslib':
+#10 1107.4 ===================================
+#10 1107.4 
+#10 1107.4 * installing *source* package ‘Rhtslib’ ...
+#10 1107.4 ** using non-staged installation via StagedInstall field
+#10 1107.4 ** libs
+#10 1107.4 cd "htslib-1.15.1" && make -f "Makefile.Rhtslib"
+#10 1107.4 make[1]: Entering directory '/tmp/RtmpHX8co0/R.INSTALL74e515018bf7/Rhtslib/src/htslib-1.15.1'
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o kfunc.o kfunc.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o kstring.o kstring.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o bcf_sr_sort.o bcf_sr_sort.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o bgzf.o bgzf.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o errmod.o errmod.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o faidx.o faidx.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o header.o header.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hfile.o hfile.c
+#10 1107.4 echo '#define HTS_VERSION_TEXT "1.15.1"' > version.h
+#10 1107.4 echo '#define HTS_CC "gcc"' > config_vars.h
+#10 1107.4 echo '#define HTS_CPPFLAGS "-I/usr/local/include -D_FILE_OFFSET_BITS=64"' >> config_vars.h
+#10 1107.4 echo '#define HTS_CFLAGS "-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden"' >> config_vars.h
+#10 1107.4 echo '#define HTS_LDFLAGS "-L/usr/local/lib -fvisibility=hidden"' >> config_vars.h
+#10 1107.4 echo '#define HTS_LIBS "-lz -lm -lbz2 -llzma -lcurl"' >> config_vars.h
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts.o hts.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts_expr.o hts_expr.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts_os.o hts_os.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o md5.o md5.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o multipart.o multipart.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o probaln.o probaln.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o realn.o realn.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o regidx.o regidx.c
+#10 1107.4 gcc -g -O2 -fstack-proError: install of package 'Rhtslib' failed [error code 1]
+#10 1107.4 tector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o region.o region.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o sam.o sam.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o synced_bcf_reader.o synced_bcf_reader.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcf_sweep.o vcf_sweep.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o tbx.o tbx.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o textutils.o textutils.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o thread_pool.o thread_pool.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcf.o vcf.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcfutils.o vcfutils.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_codecs.o cram/cram_codecs.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_decode.o cram/cram_decode.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_encode.o cram/cram_encode.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_external.o cram/cram_external.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_index.o cram/cram_index.c
+#10 1107.4 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -fvisibility=hidden -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_io.o cram/cram_io.c
+#10 1107.4 cram/cram_io.c:53:10: fatal error: bzlib.h: No such file or directory
+#10 1107.4    53 | #include <bzlib.h>
+#10 1107.4       |          ^~~~~~~~~
+#10 1107.4 compilation terminated.
+#10 1107.4 make[1]: *** [Makefile.Rhtslib:135: cram/cram_io.o] Error 1
+#10 1107.4 make[1]: Leaving directory '/tmp/RtmpHX8co0/R.INSTALL74e515018bf7/Rhtslib/src/htslib-1.15.1'
+#10 1107.4 make: *** [Makevars.common:22: htslib] Error 2
+#10 1107.4 ERROR: compilation failed for package ‘Rhtslib’
+#10 1107.4 * removing ‘/usr/local/lib/R/site-library/.renv/1/Rhtslib’
+#10 1107.4 Traceback (most recent calls last):
+#10 1107.4 12: renv::restore()
+#10 1107.4 11: renv_restore_run_actions(project, diff, current, lockfile, rebuild)
+#10 1107.4 10: renv_install_impl(records)
+#10 1107.4  9: renv_install_staged(records)
+#10 1107.4  8: renv_install_default(records)
+#10 1107.4  7: handler(package, renv_install_package(record))
+#10 1107.4  6: renv_install_package(record)
+#10 1107.4  5: withCallingHandlers(renv_install_package_impl(record), error = function(e) {
+#10 1107.4         vwritef("\tFAILED")
+#10 1107.4         writef(e$output)
+#10 1107.4     })
+#10 1107.4  4: renv_install_package_impl(record)
+#10 1107.4  3: r_cmd_install(package, path)
+#10 1107.4  2: r_exec_error(package, output, "install", status)
+#10 1107.4  1: stop(error)
+#10 1107.8 Execution halted
+#10 ERROR: executor failed running [/bin/sh -c R -e "renv::restore()"]: exit code: 1
+------
+ > [stage-0 6/9] RUN --mount=type=cache,target=/var/cache/renv R -e "renv::restore()":
+------
+executor failed running [/bin/sh -c R -e "renv::restore()"]: exit code: 1
+Makefile:3: recipe for target 'build' failed
+make: *** [build] Error 1

@@ -1,8 +1,14 @@
 
 # File: Dockerfile
-FROM rocker/shiny-verse:latest
+#FROM rocker/shiny-verse:latest
+
+FROM rocker/rstudio:4.2.0
 
 ENV RENV_VERSION 0.16.0
+# ENV SHINY_SERVER_VERSION 1.5.18.979
+RUN /rocker_scripts/install_shiny_server.sh
+
+
 
 RUN apt-get update -qq \
   && apt-get -y --no-install-recommends install \
@@ -14,7 +20,7 @@ RUN apt-get update -qq \
 RUN R -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))"
 RUN R -e "remotes::install_github('rstudio/renv@${RENV_VERSION}')"
 
-COPY app/renv.lock renv.lock
+COPY test-app/renv.lock renv.lock
 
 ENV RENV_PATHS_LIBRARY renv/library
 
@@ -27,3 +33,5 @@ RUN rm -rf /srv/shiny-server/*
 # copy in the app
 COPY app /srv/shiny-server/
 COPY test-app /srv/shiny-server/
+
+CMD ["/usr/bin/shiny-server"]
