@@ -1,9 +1,9 @@
 
 build:
-	sudo DOCKER_BUILDKIT=1 docker build --no-cache -t eas-test .
+	DOCKER_BUILDKIT=1 docker build --no-cache -t eas-test .
 
 run:
-	sudo docker run -it --rm -p 3838:3838 eas-test
+	docker run -it --rm -p 3838:3838 eas-test
 
 runmap:
 	sudo docker container run --rm  -p 3838:3838 \
