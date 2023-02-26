@@ -1,13 +1,11 @@
 
 # File: Dockerfile
-FROM rocker/shiny-verse:latest
+#FROM rocker/shiny-verse:latest
 
 
-
-
-# FROM rocker/rstudio:4.2.0
-# ENV SHINY_SERVER_VERSION 1.5.18.979
-# RUN /rocker_scripts/install_shiny_server.sh
+FROM rocker/rstudio:4.2.0
+ENV SHINY_SERVER_VERSION 1.5.18.979
+RUN /rocker_scripts/install_shiny_server.sh
 
 
 
@@ -33,6 +31,6 @@ RUN --mount=type=cache,target=/var/cache/renv R -e "renv::restore()"
 #RUN rm -rf /srv/shiny-server/*
 
 # copy in the app
-COPY -r app /srv/shiny-server/
+COPY app/ /srv/shiny-server/app/
 
 CMD ["/usr/bin/shiny-server"]
