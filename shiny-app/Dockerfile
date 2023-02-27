@@ -27,7 +27,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libfribidi-dev \
         tk-dev \
   && install2.r --error --deps TRUE \
-    shinyWidgets
+    shinyWidgets \
+	patchwork
 
 
 RUN R -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))"
