@@ -9,10 +9,12 @@ runeas:
 	sudo docker container run --rm  -p 3838:3838 \
 	-v //home/ubuntu/test_image/shiny-app/app-eas/:/srv/shiny-server/test_app/ \
 	-v /home/ubuntu/log/shiny-server/:/var/log/shiny-server/ \
+	-v //home/ubuntu/test_image/shiny-app/container_files/:/ \
 	eas-test
 
 runtest:
 	sudo docker container run --rm  -p 3838:3838 \
         -v //home/ubuntu/test_image/shiny-app/app/:/srv/shiny-server/test_app/ \
         -v /home/ubuntu/log/shiny-server/:/var/log/shiny-server/ \
+        -v //home/ubuntu/test_image/shiny-app/container_files/:/ \
         eas-test
