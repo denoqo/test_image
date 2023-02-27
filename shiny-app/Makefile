@@ -5,8 +5,14 @@ build:
 run:
 	docker run -it --rm -p 3838:3838 eas-test
 
-runmap:
+runeas:
 	sudo docker container run --rm  -p 3838:3838 \
-	-v //home/ubuntu/test_image/shiny-app/app/:/srv/shiny-server/test_app \
+	-v //home/ubuntu/test_image/shiny-app/app-eas/:/srv/shiny-server/test_app/ \
 	-v /home/ubuntu/log/shiny-server/:/var/log/shiny-server/ \
-	rocker/shiny-verse
+	eas-test
+
+runtest:
+	sudo docker container run --rm  -p 3838:3838 \
+        -v //home/ubuntu/test_image/shiny-app/app/:/srv/shiny-server/test_app/ \
+        -v /home/ubuntu/log/shiny-server/:/var/log/shiny-server/ \
+        eas-test
