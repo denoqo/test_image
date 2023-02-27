@@ -48,4 +48,8 @@ RUN rm -rf /srv/shiny-server/*
 # copy in the app
 COPY app/ /srv/shiny-server/app/
 COPY app-eas/ /srv/shiny-server/app-eas/
+
+# copy in container files # TODO: move up
+COPY container_files/ /
+
 CMD ["/usr/bin/shiny-server"]
